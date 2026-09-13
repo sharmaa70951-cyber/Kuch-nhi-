@@ -1,0 +1,187 @@
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,sans-serif;
+  background:radial-gradient(circle at top,#25204a,#090a12 65%);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px
+}
+
+.app{
+  width:min(92vw,700px)
+}
+
+.card{
+  background:rgba(20,20,32,.94);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;
+  padding:32px;
+  text-align:center;
+  box-shadow:0 20px 70px rgba(0,0,0,.45)
+}
+
+.hidden{
+  display:none!important
+}
+
+.emoji{
+  font-size:58px
+}
+
+h1{
+  font-size:42px;
+  margin:8px 0 14px;
+  letter-spacing:2px
+}
+
+p{
+  color:#c8c9d6;
+  line-height:1.5
+}
+
+button{
+  border:0;
+  border-radius:14px;
+  padding:15px 22px;
+  font-size:17px;
+  font-weight:800;
+  cursor:pointer;
+  background:#7c5cff;
+  color:#fff;
+  transition:.15s
+}
+
+button:hover{
+  transform:scale(1.03)
+}
+
+button:active{
+  transform:scale(.96)
+}
+
+.danger{
+  background:#ef3340;
+  box-shadow:0 0 30px rgba(239,51,64,.35);
+  font-size:22px;
+  min-width:210px
+}
+
+.muted{
+  font-size:14px
+}
+
+.shareBox{
+  display:flex;
+  gap:10px;
+  margin:22px 0
+}
+
+.shareBox input{
+  flex:1;
+  min-width:0;
+  border:1px solid #414255;
+  border-radius:12px;
+  background:#0e0f18;
+  color:#fff;
+  padding:13px;
+  font-size:14px
+}
+
+.stats{
+  display:grid;
+  gap:10px;
+  text-align:left;
+  background:#10111b;
+  border-radius:16px;
+  padding:18px;
+  margin-top:18px
+}
+
+.dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#777
+}
+
+.dot.online{
+  background:#35d07f;
+  box-shadow:0 0 12px #35d07f
+}
+
+.event{
+  font-size:24px;
+  font-weight:800;
+  padding:35px 15px;
+  margin-top:18px;
+  border-radius:18px;
+  background:#171827;
+  min-height:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.log{
+  text-align:left;
+  margin-top:14px;
+  max-height:180px;
+  overflow:auto;
+  color:#aeb0c2;
+  font-size:14px
+}
+
+.countdown{
+  font-size:70px;
+  font-weight:900;
+  margin-top:20px
+}
+
+.shake{
+  animation:shake .35s linear 2
+}
+
+.flash{
+  animation:flash .5s
+}
+
+@keyframes shake{
+  0%,100%{transform:translateX(0)}
+  25%{transform:translateX(-12px)}
+  75%{transform:translateX(12px)}
+}
+
+@keyframes flash{
+  0%{background:#fff}
+  100%{
+    background:radial-gradient(
+      circle at top,
+      #25204a,
+      #090a12 65%
+    )
+  }
+}
+
+@media(max-width:560px){
+  .card{
+    padding:24px 18px
+  }
+
+  h1{
+    font-size:34px
+  }
+
+  .shareBox{
+    flex-direction:column
+  }
+
+  .shareBox button{
+    width:100%
+  }
+}
