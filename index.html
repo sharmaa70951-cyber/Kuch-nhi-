@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DON'T PRESS 😈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="app">
+
+  <!-- HOST -->
+  <section id="home" class="card">
+    <div class="emoji">😈</div>
+
+    <h1>DON'T PRESS</h1>
+
+    <p>
+      Ek secret room banao aur link apne friend ko bhejo.
+    </p>
+
+    <button id="createBtn">
+      Create Secret Room
+    </button>
+
+    <p id="homeStatus" class="muted"></p>
+  </section>
+
+
+  <!-- GUEST -->
+  <section id="guest" class="card hidden">
+
+    <div id="stage">
+
+      <div class="emoji">⚠️</div>
+
+      <h1 id="guestTitle">
+        DON'T PRESS
+      </h1>
+
+      <p id="guestText">
+        Is button ko bilkul mat dabana. Seriously. 😶
+      </p>
+
+      <button id="pressBtn" class="danger">
+        🔴 PRESS
+      </button>
+
+      <div id="countdown" class="countdown hidden"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOST -->
+  <section id="host" class="card hidden">
+
+    <div class="emoji">👀</div>
+
+    <h1>Secret Room</h1>
+
+    <p id="hostStatus">
+      Guest ka wait ho raha hai...
+    </p>
+
+
+    <div class="shareBox">
+
+      <input
+        id="inviteLink"
+        readonly
+      >
+
+      <button id="copyBtn">
+        Copy Link
+      </button>
+
+    </div>
+
+
+    <div class="stats">
+
+      <div>
+        <span id="connectionDot" class="dot"></span>
+        <b id="connectionText">
+          Waiting
+        </b>
+      </div>
+
+      <div>
+        🔴 Presses:
+        <b id="pressCount">0</b>
+      </div>
+
+      <div>
+        🎯 Stage:
+        <b id="stageCount">0</b>
+      </div>
+
+    </div>
+
+
+    <div id="hostEvent" class="event">
+      Guest ke action yahan live dikhenge.
+    </div>
+
+
+    <div id="hostLog" class="log"></div>
+
+  </section>
+
+</main>
+
+
+<script
+  type="module"
+  src="script.js">
+</script>
+
+</body>
+</html>
